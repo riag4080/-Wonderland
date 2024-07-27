@@ -1,0 +1,79 @@
+<% layout("/layouts/boilerplate") %>
+<div class="row mt-3">
+    <div class="col-8 offset-2">
+    <h3>Create New Listing</h3>
+    <form method="POST" action="/listings" novalidate class="need-validation"enctype="multipart/form-data">
+        <div class="mb-3">
+        <label for="title" class="form-label"> Title </label>
+        <input name="listing[title]"
+         placeholeder="enter title"
+          type="text" 
+          class="form-control" required/>
+          <div class="valid-feedback">Nice Title!</div>
+    </div>
+<div class="mb-3">
+    <label for="description" 
+    class="form-label"> Description </label>
+    <textarea 
+    name="listing[description]"
+    placeholder="enter description"
+    class="form-control" required></textarea>
+</div>
+   
+ 
+  <div class="mb-3">
+    <label for="image"  class="form-label">upload Image</label>
+    <input name="listing[image]"
+     type="file"
+     class="form-control"/>
+    </div>
+
+<div class="row">
+
+    <div class="mb-3 col-md-4">
+        <label for="price"  class="form-label">price</label>
+        <input name="listing[price]" 
+        placeholder="enter price" 
+        type="number" 
+        class="form-control" required/>
+        <div class="valid-feedback">Enter a valid price</div>
+  </div>
+
+
+  <div class="mb-3 col-mid-8">
+    <label for="country"  class="form-label">Country</label>
+    <input name="listing[country]"
+     placeholder="enter country" 
+     type="text"
+     class="form-control" required/>
+     <div class="valid-feedback">Enter a country</div>
+    
+  </div>
+
+  <div class="mb-3">
+    <label for="location"  class="form-label">Location</label>
+    <input name="listing[location]" 
+    placeholder="enter location" 
+    type="text"
+    class="form-control" required/>
+    <div class="valid-feedback">Enter a valid location</div>
+    
+  </div>
+
+
+        <!-- <ul>
+      <li><%= listing.title %></li>
+      <li><%= listing.description %></li>
+      <li>&#8377; <%= listing.price.toLocaleString("en-IN") %></li>
+      <li><%= listing.location %></li>
+      <li><%= listing.country %></li>
+    </ul> -->
+    <br /><br />
+    <!-- <a href="/listings/<%= listing._id %>/edit">Edit this Listing</a>
+    <br /><br />
+    <form method="POST" action="/listings/<%=listing._id%>?_method=DELETE"> -->
+      <button class="btn btn-dark add-btn mt-3">Add</button>
+      <br /><br />
+    </form>
+</div>
+  </div>
